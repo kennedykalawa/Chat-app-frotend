@@ -2,79 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    body{
-      background-color: rgb(62, 62, 62);
-    }
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-    section{
-        display: flex;
-        flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    p{
-      text-wrap: calc(1);
-    }
-    span{
-      color: rgb(16, 178, 178);
-      font-size: 20px;
-      align-items: center;
-      justify-content: center;
-    }
-    .p{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-  </style>
+  <title>Frontend Mentor | Chat App</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
- <section>
-  <span>Samuel Green</span>
-    <div class="p">
-    <p>Available to Walk 
+  <div class="bg-shape"></div>
 
-  That sounds great. I’d be happy with that.
+  <main class="container">
+    <section class="app-illustration">
+      <div class="phone-container">
+        <div class="app-header">
+          <div class="user-info">
+            <span class="back-arrow">&lsaquo;</span>
+            <img src="./images/avatar.jpg" alt="Samuel Green" class="avatar">
+            <div class="user-text">
+              <h1>Samuel Green</h1>
+              <p>Available to Walk</p>
+            </div>
+          </div>
+          <div class="options">&#8942;</div>
+        </div>
 
-  Could you send over some pictures of your dog, please?
+        <div class="chat-window">
+          <p class="msg received">That sounds great. I’d be happy with that.</p>
+          <p class="msg received">Could you send over some pictures of your dog, please?</p>
+          
+          <div class="dog-images">
+            <img src="./images/dog-image-1.jpg" alt="dog">
+            <img src="./images/dog-image-2.jpg" alt="dog">
+            <img src="./images/dog-image-3.jpg" alt="dog">
+          </div>
 
-  Here are a few pictures. She’s a happy girl!
+          <p class="msg sent">Here are a few pictures. She’s a happy girl!</p>
+          <p class="msg sent">Can you make it?</p>
+          
+          <p class="msg received">She looks so happy! The time we discussed works. How long shall I take her out for?</p>
+          
+          <div class="booking-option">
+            <div class="radio"></div>
+            <span>30 minute walk</span>
+            <span class="price">$29</span>
+          </div>
 
-  Can you make it?
+          <div class="type-area">
+            <span>Type a message…</span>
+            <div class="send-btn">&rsaquo;</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  She looks so happy! The time we discussed works. How long shall I take her out for?
-
-  30 minute walk
-  $29
-
-  1 hour walk
-  $49
-
-  Type a message…
-
-  Simple booking
-
-     </p>
-     </div>
-
-     <p>Stay in touch with our dog walkers through the chat interface. This makes it easy to 
-  discuss arrangements and make bookings. Once the walk has been completed you can rate 
-  your walker and book again all through the chat.
-    </p>
-  </section>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <section class="hero-text">
+      <h2>Simple booking</h2>
+      <p>Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and book again all through the chat.</p>
+    </section>
+  </main>
 </body>
 </html>
