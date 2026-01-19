@@ -1,0 +1,101 @@
+/* General Setup */
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: hsl(270, 20%, 96%); /* Gray 100 */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* The Decorative Background Shape */
+.bg-shape {
+  position: absolute;
+  top: 0;
+  left: -10%;
+  width: 500px;
+  height: 80%;
+  /* Gradient from Pink 500 to Purple 500 */
+  background: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+  border-bottom-left-radius: 250px;
+  border-bottom-right-radius: 250px;
+  z-index: -1;
+}
+
+/* Phone Container */
+.phone-container {
+  width: 250px;
+  background: hsl(270, 20%, 96%); /* Gray 100 */
+  border: 10px solid hsl(0, 100%, 100%); /* White */
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Chat Header */
+.app-header {
+  /* Gradient Background */
+  background: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+  padding: 30px 15px 12px;
+  color: white;
+  border-radius: 0 0 5px 5px;
+}
+
+.user-text h1 {
+  font-size: 12px;
+  margin: 0;
+}
+
+.user-text p {
+  font-size: 8px;
+  color: hsl(276, 100%, 81%); /* Purple 300 */
+  margin: 0;
+}
+
+/* Chat Logic */
+.chat-window {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.msg {
+  max-width: 70%;
+  padding: 8px;
+  font-size: 9px;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+/* Received messages (Left side) */
+.received {
+  background-color: hsla(276, 55%, 52%, 0.1); /* Light Purple 600 */
+  color: hsl(276, 55%, 52%); /* Purple 600 */
+  border-radius: 10px 10px 10px 4px;
+  align-self: flex-start;
+}
+
+/* Sent messages (Right side) */
+.sent {
+  background-color: hsl(0, 100%, 100%); /* White */
+  color: hsl(270, 7%, 64%); /* Gray 500 */
+  border-radius: 10px 10px 4px 10px;
+  align-self: flex-end;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Booking Options */
+.booking-option {
+  background: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+  color: white;
+  padding: 8px 12px;
+  border-radius: 10px 10px 10px 4px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 9px;
+  width: 75%;
+}
