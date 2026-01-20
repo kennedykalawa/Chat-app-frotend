@@ -124,8 +124,9 @@ body {
 .hero-text p { color: hsl(270, 7%, 64%); line-height: 1.6; }
 
 .me{
-    color: rgb(9, 155, 114);
+    color: rgb(12, 203, 181);
     font-size: 18px;
     font-weight: 700;
     font-family: 'Times New Roman', Times, serif;
+
 }
