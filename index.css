@@ -345,3 +345,20 @@ footer .me {
     font-size: 15px;
   }
 }
+
+/* Focus States */
+.submit-btn:focus,
+.back-arrow:focus,
+.dots:focus {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .msg,
+  .dog-images,
+  .price-option {
+    animation: none;
+  }
+}
