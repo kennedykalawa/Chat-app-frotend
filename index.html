@@ -8,22 +8,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="shape-left"></div>
-  <div class="shape-right"></div>
+  <div class="shape shape-left"></div>
+  <div class="shape shape-right"></div>
 
   <main class="main-container">
     <div class="phone-frame">
       <div class="phone-screen">
         <div class="app-header">
           <div class="header-content">
-            <span class="back-arrow" tabindex="0">&lsaquo;</span>
+            <button class="icon-button back-arrow" aria-label="Go back">&lsaquo;</button>
             <div class="user-avatar"></div>
             <div class="user-info">
               <h2>Samuel Green</h2>
               <p>Available to Walk</p>
             </div>
           </div>
-          <div class="dots" tabindex="0">&#8942;</div>
+          <button class="icon-button dots" aria-label="More options">&#8942;</button>
         </div>
 
         <div class="chat-area">
@@ -41,21 +41,22 @@
           
           <p class="msg received">She looks so happy! The time we discussed works. How long shall I take her out for?</p>
           
-          <div class="price-option">
-            <div class="radio-circle"></div>
+          <button class="price-option" type="button" aria-pressed="false">
+            <span class="radio-circle" aria-hidden="true"></span>
             <span>30 minute walk</span>
             <span class="price">$29</span>
-          </div>
-          <div class="price-option">
-            <div class="radio-circle"></div>
+          </button>
+          <button class="price-option" type="button" aria-pressed="false">
+            <span class="radio-circle" aria-hidden="true"></span>
             <span>1 hour walk</span>
             <span class="price">$49</span>
-          </div>
+          </button>
 
-          <div class="input-area">
-            <p>Type a message…</p>
-            <div class="submit-btn" tabindex="0">&rsaquo;</div>
-          </div>
+          <form class="input-area">
+            <label class="sr-only" for="chat-message">Message Samuel</label>
+            <input id="chat-message" type="text" placeholder="Type a message…" aria-label="Message Samuel">
+            <button class="submit-btn" type="submit" aria-label="Send message">&rsaquo;</button>
+          </form>
         </div>
       </div>
     </div>
@@ -65,10 +66,24 @@
       <p>Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and book again all through the chat.</p>
     </section>
 
-    <footer>
-        &lt; &lt; &lt;
-        <p class="me"><a href="https://grand-swan-f709f5.netlify.app/">By Ktec </a></p> &gt; &gt; &gt;
+    <footer aria-label="Site credit">
+        <span aria-hidden="true">✦</span>
+        <a href="https://grand-swan-f709f5.netlify.app/">Designed by Ktec</a>
     </footer>
   </main>
+  <script>
+    const bookingOptions = document.querySelectorAll('.price-option');
+
+    bookingOptions.forEach((option) => {
+      option.addEventListener('click', () => {
+        bookingOptions.forEach((item) => item.setAttribute('aria-pressed', 'false'));
+        option.setAttribute('aria-pressed', 'true');
+      });
+    });
+
+    document.querySelector('.input-area').addEventListener('submit', (event) => {
+      event.preventDefault();
+    });
+  </script>
 </body>
 </html>
