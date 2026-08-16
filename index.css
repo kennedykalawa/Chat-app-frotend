@@ -109,7 +109,7 @@ body {
   height: 28px;
   border-radius: 50%;
   border: 2px solid white;
-  background: url('../images/avatar.jpg') center/cover;
+  background: url('images/avatar.jpg') center/cover;
   flex-shrink: 0;
 }
 
